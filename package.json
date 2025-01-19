@@ -1,0 +1,19 @@
+{
+  "name": "preline-tw-v4-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.0-beta.9",
+    "preline": "github:BALOTIAS/preline-tw-v4",
+    "tailwindcss": "^4.0.0-beta.9"
+  }
+}

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Adds preline source files and plugin as described in the old tw quick setup example,
+   only updated to the new tw v4 syntax: https://preline.co/docs/index.html */
+@source "preline/dist"; /* <- not sure if it should point to the directory instead: "../preline/dist" */
+@plugin "preline/plugin"; /* Uses newish shorthand syntax from https://github.com/BALOTIAS/preline-tw-v4 */
+
+/* ================================================================================================================== */
+
+/*
+  NOTES: There are a few things that are different in Tailwind CSS v4 compared to v3,
+  see the upgrade guide for more info: https://tailwindcss.com/docs/v4-beta#changes-from-v3
+  ---
+  In short, the copied admin example might look a bit different or have some visual errors,
+  as I haven't fixed any of those, besides the old default colors below.
+ */
+
+/* Use class based strategy for dark mode: https://tailwindcss.com/docs/v4-beta#configuring-dark-mode */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    /* Use old default colors: https://tailwindcss.com/docs/v4-beta#default-border-color-change */
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+
+    /* Use old placeholder colors */
+    input::placeholder,
+    textarea::placeholder {
+        color: theme(--color-gray-400);
+    }
+}
